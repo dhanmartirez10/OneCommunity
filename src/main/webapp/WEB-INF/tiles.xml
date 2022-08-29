@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <!DOCTYPE tiles-definitions PUBLIC  
-        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+ <!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
@@ -13,14 +13,14 @@
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
 	</definition>
-	
+
 	<!-- Page not found. -->
 	<definition name="page-not-found" extends="base.definition">
 		<put-attribute name="title" value="One Community Platform" />
 		<put-attribute name="description" value="" />
 		<put-attribute name="body" value="/WEB-INF/views/error/page-not-found.jsp" />
 		<put-attribute name="javascripts" value="" />
-	</definition>	
+	</definition>
 
 	<!-- Window Template -->
 	<definition name="window.definition" template="/WEB-INF/views/layout/window.jsp">
@@ -28,23 +28,23 @@
 		<put-attribute name="description" value="" />
 		<put-attribute name="body" value="" />
 	</definition>
-	
+
 	<!-- Index Page -->
 	<definition name="index" extends="base.definition" >
 		<put-attribute name="title" value="Welcome to One Community Platform" />
 		<put-attribute name="description" value="" />
 		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
-		<put-attribute name="javascripts" value="/javascripts/index.js" />	
-	</definition>	
-	
+		<put-attribute name="javascripts" value="/javascripts/index.js" />
+	</definition>
+
 	<!-- COMMUNITY MANAGEMENT -->
 	<definition name="client" extends="base.definition" >
 		<put-attribute name="title" value="Community Management" />
 		<put-attribute name="description" value="" />
 		<put-attribute name="body" value="/WEB-INF/views/client/clientList.jsp" />
 		<put-attribute name="javascripts" value="/javascripts/client/clientList.js" />
-	</definition>	
-	
+	</definition>
+
 	<!-- COMMUNITY MANAGEMENT -->
 	<definition name="client" extends="base.definition" >
 		<put-attribute name="title" value="Community Management" />
@@ -59,7 +59,7 @@
 		<put-attribute name="description" value="" />
 		<put-attribute name="body" value="/WEB-INF/views/setting/settingList.jsp" />
 		<put-attribute name="javascripts" value="/javascripts/scope/settingList.js" />
-	</definition>	
+	</definition>
 
 	<!-- SOCIAL MEDIA MANAGEMENT -->
 	<definition name="socialmedia" extends="base.definition" >
@@ -67,14 +67,14 @@
 		<put-attribute name="description" value="" />
 		<put-attribute name="body" value="/WEB-INF/views/socialmedia/socialmediaList.jsp" />
 		<put-attribute name="javascripts" value="/javascripts/socialmedia/socialmediaList.js" />
-	</definition>	
-	
+	</definition>
+
 	<!-- QUEUE MANAGEMENT -->
-	<definition name="socialmedia" extends="base.definition" >
-		<put-attribute name="title" value="Socia Media Cross Posting" />
+	<definition name="queue" extends="base.definition" >
+		<put-attribute name="title" value="Queue Management" />
 		<put-attribute name="description" value="" />
-		<put-attribute name="body" value="/WEB-INF/views/socialmedia/socialmediaList.jsp" />
-		<put-attribute name="javascripts" value="/javascripts/socialmedia/socialmediaList.js" />
-	</definition>	
+		<put-attribute name="body" value="/WEB-INF/views/queue/queueManagementList.jsp" />
+		<put-attribute name="javascripts" value="/javascripts/queue/queueManagementList.js" />
+	</definition>
 
 </tiles-definitions>

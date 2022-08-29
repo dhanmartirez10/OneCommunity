@@ -13,12 +13,12 @@ import com.amdocs.onecommunity.service.ClientMainService;
 
 @Controller
 public class AppController {
-	
+
 	@RequestMapping(value="/", method = RequestMethod.GET)
     public String showHomeController() {
         return "index";
     }
-	
+
 	@RequestMapping(value = "/client", method = RequestMethod.GET)
 	public String showClientMainPage(Model model,RedirectAttributes redirectAttributes) {
 
@@ -28,7 +28,7 @@ public class AppController {
 
 		return "client";
 	}
-	
+
 	@RequestMapping(value = "/socialmedia", method = RequestMethod.GET)
 	public String showSocialMediaMainPage(Model model,RedirectAttributes redirectAttributes) {
 
@@ -40,7 +40,7 @@ public class AppController {
 	}
 
 	@RequestMapping(value = "/queue", method = RequestMethod.GET)
-	public String showSocialMediaMainPage(Model model,RedirectAttributes redirectAttributes) {
+	public String showQueueManagementMainPage(Model model,RedirectAttributes redirectAttributes) {
 
 		ClientMainService clientManiService = new ClientMainService();
 		List<ClientMain> clientMain = clientManiService.getClientList();
@@ -48,7 +48,7 @@ public class AppController {
 
 		return "queue";
 	}
-	
+
 	@RequestMapping(value = "/setting", method = RequestMethod.GET)
 	public String showSettingPage(Model model,RedirectAttributes redirectAttributes) {
 
@@ -58,5 +58,5 @@ public class AppController {
 
 		return "setting";
 	}
-	
+
 }
