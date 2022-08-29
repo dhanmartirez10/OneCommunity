@@ -1,0 +1,85 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<script type="text/javascript">
+		window.onmouseout = closeAllMenu;
+		window.onmouseleave = closeAllMenu;
+
+		function closeAllMenu() {
+			closeNavMenu();
+			closeAccountMenu();
+		}
+
+		function openNavMenu() {
+			var ul = document.getElementById('wizgate-navContainer');
+			ul.style.visibility = 'visible';
+			ul.style.opacity = 1;
+		}
+
+		function closeNavMenu() {
+			var ul = document.getElementById('wizgate-navContainer');
+			ul.style.visibility = 'hidden';
+			ul.style.opacity = 0;
+		}
+
+		function openAccountMenu() {
+			var ul = document.getElementById('wizgate-accountContainer');
+			ul.style.visibility = 'visible';
+			ul.style.opacity = 1;
+		}
+
+		function closeAccountMenu() {
+			var ul = document.getElementById('wizgate-accountContainer');
+			ul.style.visibility = 'hidden';
+			ul.style.opacity = 0;
+		}
+	</script>
+
+	<div id="wizgate-container">
+		<div id="wizgate-navbar" onmouseout="closeAllMenu()">
+			<div id="wizgate-navMenu">
+				<a href="${sessionScope.dashboardHomeUrl}"
+					onmouseover="openNavMenu()" id=""> <h:graphicImage
+						id="wizgate-logo" alt="wizgate"
+						value="/common/images/wizgate-menu-button.png">
+					</h:graphicImage>
+				</a>
+			</div>
+			<div id="wizgate-logout">
+				Welcome AdminDemo! | <a href="#" onmouseover="openAccountMenu()"
+					onmouseout="closeAccountMenu()">Account</a>
+			</div>
+		</div>
+		
+		<div id="wizgate-navContainer" onmouseout="closeNavMenu()">
+			<div id="wizgate-menuContainer">
+				<ul onmouseover="openNavMenu()" onmouseout="closeNavMenu()">
+					<ui:repeat var="userFacility"
+						value="#{sessionScope.userFacilities}">
+						<li><h:outputLink value="#{userFacility.url}">
+								<h:outputText value="#{userFacility.description}"></h:outputText>
+							</h:outputLink></li>
+					</ui:repeat>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="wizgate-accountContainer">
+			<ul onmouseover="openAccountMenu()" onmouseout="closeAccountMenu()">
+				<li><h:outputLink value="#{sessionScope.changePasswordUrl}">
+						<h:outputText value="Change Password" />
+					</h:outputLink></li>
+				<li><hr /></li>
+				<li><h:outputLink value="#{sessionScope.casLogoutUrl}">
+						<h:outputText value="Logout" />
+					</h:outputLink></li>
+			</ul>
+		</div>
+
+
+	</div>
+	<div id="wizgate-navbar-spacer"></div>
+
+</ui:composition>

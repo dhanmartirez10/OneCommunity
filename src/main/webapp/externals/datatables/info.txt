@@ -1,0 +1,18 @@
+Single file css and js for the following modules
+
+DataTables	-1.10.9
+Responsive	-1.0.7
+Bootstrap	-3.3.5
+
+-------------------------------------------------
+style - datatables.min.css
+-------------------------------------------------
+bootstrap - dataTables.bootstrap.min.css
+responsive - dataTables.responsive.min.js
+
+-------------------------------------------------
+javascript - datatables.min.js
+-------------------------------------------------
+bootstrap - dataTables.bootstrap.min.js
+responsive - dataTables.responsive.min.js
+datatable core - jquery.dataTables.min.js

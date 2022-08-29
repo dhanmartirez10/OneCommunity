@@ -1,0 +1,71 @@
+@import url("reset.css");
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333
+}
+
+p {
+	padding: 10px;
+}
+
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header {
+	float: left;
+	height: 60px;
+	width: 100%;
+	background: #4B8BBE;
+	color: #fff;
+	font-size: 25px;
+	display: table-cell;
+	vertical-align: middle;
+	margin-top: 30px;
+}
+
+#header img {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+#header-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#navigation {
+	float: left;
+	height: 40px;
+	width: 100%;
+	background: #fff;
+	transition: all 0.3s;
+}
+
+#contentliquid {
+	float: left;
+	margin-top: 150px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#content {
+	background: #FFFFFF;
+	width: 100%;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	height: 35px;
+	width: 100%;
+	background: #4B8BBE;
+	color: #fff;
+	clear: both;
+	transition: all 0.3s;
+}
